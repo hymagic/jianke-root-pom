@@ -116,6 +116,8 @@
         <servlet-api.version>3.1.0</servlet-api.version>
         <simple-json.version>1.1.1</simple-json.version>
         <slf4j.version>1.7.9</slf4j.version>
+        <!--mssql-->
+        <mssql.version>4.0.2206.100</mssql.version>
         <!-- spring -->
         <spring.version>4.2.4.RELEASE</spring.version>
         <spring-data-commons.version>1.11.2.RELEASE</spring-data-commons.version>
@@ -133,6 +135,8 @@
         <velocity-tools.version>2.0</velocity-tools.version>
         <webjars-hal-browser.version>9f96c74</webjars-hal-browser.version>
         <webjars-locator.version>0.30</webjars-locator.version>
+        <!-- lucene-->
+        <lucene.version>5.5.1</lucene.version>
     </properties>
 
     <!-- maven最低版本，默认为2.0 -->
@@ -642,6 +646,13 @@
                 <version>${jtds.version}</version>
             </dependency>
 
+            <!-- mssql-->
+            <dependency>
+                <groupId>com.hynnet</groupId>
+                <artifactId>sqljdbc4-chs</artifactId>
+                <version>${mssql.version}</version>
+            </dependency>
+
             <!-- html解析 -->
             <dependency>
                 <groupId>net.sourceforge.nekohtml</groupId>
@@ -1088,6 +1099,84 @@
                 <groupId>redis.clients</groupId>
                 <artifactId>jedis</artifactId>
                 <version>${jedis.version}</version>
+            </dependency>
+
+
+
+
+            <!--lucene start-->
+            <dependency>
+                <groupId>org.apache.lucene</groupId>
+                <artifactId>lucene-core</artifactId>
+                <version>${lucene.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.lucene</groupId>
+                <artifactId>lucene-queries</artifactId>
+                <version>${lucene.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.lucene</groupId>
+                <artifactId>lucene-queryparser</artifactId>
+                <version>${lucene.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.lucene</groupId>
+                <artifactId>lucene-analyzers-common</artifactId>
+                <version>${lucene.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.lucene</groupId>
+                <artifactId>lucene-highlighter</artifactId>
+                <version>${lucene.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.lucene</groupId>
+                <artifactId>lucene-spatial</artifactId>
+                <version>${lucene.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.lucene</groupId>
+                <artifactId>lucene-suggest</artifactId>
+                <version>${lucene.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.lucene</groupId>
+                <artifactId>lucene-test-framework</artifactId>
+                <version>${lucene.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.lucene</groupId>
+                <artifactId>lucene-analyzers-smartcn</artifactId>
+                <version>${lucene.version}</version>
+            </dependency>
+
+            <!--lucene end-->
+
+            <dependency>
+                <groupId>com.belerweb</groupId>
+                <artifactId>pinyin4j</artifactId>
+                <version>2.5.1</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.ansj</groupId>
+                <artifactId>ansj_seg</artifactId>
+                <version>5.0.4</version>
+            </dependency>
+
+            <!-- icu4j -->
+            <dependency>
+                <groupId>com.ibm.icu</groupId>
+                <artifactId>icu4j</artifactId>
+                <version>55.1</version>
             </dependency>
         </dependencies>
 
