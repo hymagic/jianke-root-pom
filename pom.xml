@@ -1158,6 +1158,12 @@
                 <version>${lucene.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>org.apache.lucene</groupId>
+                <artifactId>lucene-facet</artifactId>
+                <version>${lucene.version}</version>
+            </dependency>
+
             <!--lucene end-->
 
             <dependency>
