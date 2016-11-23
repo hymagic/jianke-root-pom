@@ -136,7 +136,7 @@
         <webjars-hal-browser.version>9f96c74</webjars-hal-browser.version>
         <webjars-locator.version>0.30</webjars-locator.version>
         <!-- lucene-->
-        <lucene.version>5.5.1</lucene.version>
+        <lucene.version>5.5.3</lucene.version>
     </properties>
 
     <!-- maven最低版本，默认为2.0 -->
