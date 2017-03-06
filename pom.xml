@@ -15,7 +15,7 @@
         <url>http://www.jianke.com</url>
     </organization>
 
-    <!-- 定义开发人 可忽略-->
+    <!-- 定义开发人 -->
     <developers>
         <developer>
             <id>magic</id>
@@ -136,7 +136,8 @@
         <webjars-hal-browser.version>9f96c74</webjars-hal-browser.version>
         <webjars-locator.version>0.30</webjars-locator.version>
         <!-- lucene-->
-        <lucene.version>5.5.3</lucene.version>
+        <lucene.version>5.5.4</lucene.version>
+        <solr.version>5.5.4</solr.version>
     </properties>
 
     <!-- maven最低版本，默认为2.0 -->
@@ -190,6 +191,24 @@
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-aspects</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-jms</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-messaging</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-expression</artifactId>
                 <version>${spring.version}</version>
             </dependency>
 
@@ -1167,6 +1186,12 @@
             <!--lucene end-->
 
             <dependency>
+                <groupId>org.apache.solr</groupId>
+                <artifactId>solr-solrj</artifactId>
+                <version>${solr.version}</version>
+            </dependency>
+
+            <dependency>
                 <groupId>com.belerweb</groupId>
                 <artifactId>pinyin4j</artifactId>
                 <version>2.5.1</version>
@@ -1389,29 +1414,7 @@
     </build>
 
     <profiles>
-        <profile>
-            <id>default</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-            <repositories>
-                <!-- Repositories to allow snapshot and release imports during development. -->
-                <repository>
-                    <id>release</id>
-                    <url>http://xxxxxx/release</url>
-                    <snapshots>
-                        <enabled>false</enabled>
-                    </snapshots>
-                </repository>
-                <repository>
-                    <id>snapshots</id>
-                    <url>http://xxxx/snapshot</url>
-                    <snapshots>
-                        <enabled>true</enabled>
-                    </snapshots>
-                </repository>
-            </repositories>
-        </profile>
+
         <!-- env -->
         <!-- 使用config-<id>.properties来替换 设置过虑的资源文件中的${key}  -->
         <profile>
